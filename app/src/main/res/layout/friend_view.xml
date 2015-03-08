@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+ <LinearLayout
+     android:orientation="vertical"
+     android:layout_width="0dp"
+     android:gravity="center"
+     android:layout_gravity="center"
+     android:layout_weight="0.85"
+     android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/friendName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="FriendName"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+    <TextView
+        android:id="@+id/friendPhone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:textSize="16dp"/>
+
+ </LinearLayout>
+
+ <LinearLayout
+     android:id="@+id/delete"
+     android:gravity="center"
+     android:layout_gravity="center"
+     android:layout_width="0dp"
+     android:layout_height="50dp"
+     android:layout_weight=".15">
+     <ImageView
+         android:layout_gravity="center"
+         android:src="@drawable/x_icon"
+         android:layout_width="15dp"
+         android:layout_height="15dp" />
+
+ </LinearLayout>
+
+</LinearLayout>

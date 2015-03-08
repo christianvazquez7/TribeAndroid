@@ -1,0 +1,135 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:weightSum="1"
+    tools:context="com.tagalong.sms.MainActivity">
+
+    <TextView android:text="Welcome to [Tribe]" android:layout_width="fill_parent"
+        android:layout_weight="0.12"
+        android:layout_height="0dp"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:textSize="24dp"
+        android:background="#2980b9"
+        android:textColor="#fff"
+
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.77"
+        android:orientation="vertical"
+        android:background="#E4E4E4"
+        android:weightSum="1"
+       >
+
+        <TextView
+            android:id="@+id/prompt"
+            android:background="#f0f0f0"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:textSize="20dp"
+            android:text="Add 5 friends to your tribe"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="#000"
+
+            android:layout_marginBottom="10dp"
+            />
+
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/message"
+            android:layout_weight="0.75"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:background="#fff"
+            android:weightSum="1"
+            >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.12"
+            android:background="#3498db">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Active Friends"
+                android:textColor="#fff"/>
+            </LinearLayout>
+
+            <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.88"
+                android:id="@+id/list"
+                ></ListView>
+
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_weight="0.15"
+            android:layout_gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                style="?android:attr/android:progressBarStyleSmall"
+                android:visibility="gone"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2ecc71"
+                android:text="Connection Status goes here"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/actionButton"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.11"
+        android:background="#27ae60"
+        android:text="Add Friend"
+        android:textSize="18dp"
+        android:textColor="#fff"/>
+
+</LinearLayout>
