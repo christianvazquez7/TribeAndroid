@@ -50,9 +50,11 @@ public class TribeFriendAdapter extends ArrayAdapter<Friend> {
 
         friendName = (TextView) convertView.findViewById(R.id.friendName);
         friendPhone = (TextView) convertView.findViewById(R.id.friendPhone);
-
+        friendPhone.setText("");
+        if(getItem(position).getState() != null){
+            friendPhone.setText(getItem(position).getState());
+        }
         friendName.setText(getItem(position).getName());
-        friendPhone.setText(getItem(position).getNumber());
 
 
 

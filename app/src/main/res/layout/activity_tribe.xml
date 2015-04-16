@@ -24,7 +24,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.77"
+        android:layout_weight="0.78"
         android:orientation="vertical"
         android:background="#E4E4E4"
         android:weightSum="1"
@@ -39,7 +39,7 @@
             android:layout_height="0dp"
             android:layout_weight="0.1"
             android:textSize="20dp"
-            android:text="Add 5 friends to your tribe"
+            android:text="Add between 4 and 10 friends"
             android:fontFamily="sans-serif-thin"
             android:textColor="#000"
 
@@ -52,7 +52,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:id="@+id/message"
-            android:layout_weight="0.75"
+            android:layout_weight="0.85"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_width="fill_parent"
@@ -64,7 +64,7 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.12"
+            android:layout_weight="0.10"
             android:background="#3498db">
             <TextView
                 android:layout_width="fill_parent"
@@ -78,57 +78,49 @@
             <ListView
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.88"
+                android:layout_weight="0.8"
                 android:id="@+id/list"
                 ></ListView>
 
+            <LinearLayout
+                android:id="@+id/actionButton"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.10"
+                android:background="#2980b9"
+                android:textColor="#fff"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_gravity="center"
+
+                    android:layout_height="25dp"
+                    android:src="@drawable/plus"/>
+
+                </LinearLayout>
 
 
-        </LinearLayout>
-
-
-
-
-        <LinearLayout
-            android:layout_weight="0.15"
-            android:layout_gravity="center"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-            <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/progressBar"
-                style="?android:attr/android:progressBarStyleSmall"
-                android:visibility="gone"
-                android:layout_marginRight="5dp"/>
-            <TextView
-                android:visibility="gone"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:id="@+id/status"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#2ecc71"
-                android:text="Connection Status goes here"
-                android:textSize="15dp"
-                android:gravity="center"
-                android:layout_gravity="center"/>
 
         </LinearLayout>
+
+
+
+
+
 
 
     </LinearLayout>
 
 
     <Button
-        android:id="@+id/actionButton"
+        android:id="@+id/done"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.11"
-        android:background="#27ae60"
-        android:text="Add Friend"
+        android:layout_weight="0.10"
+        android:background="#95a5a6"
+        android:text="Done"
         android:textSize="18dp"
         android:textColor="#fff"/>
 

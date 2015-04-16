@@ -21,6 +21,8 @@ import android.widget.Toast;
 import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
 
+import org.json.JSONObject;
+
 
 public class TribeReceiver extends BroadcastReceiver {
 
@@ -47,6 +49,23 @@ public class TribeReceiver extends BroadcastReceiver {
         } else if (action.equals("android.intent.action.BOOT_COMPLETED")){
             Intent bluetoothServiceIntent = new Intent(context,SentMessageService.class);
             context.startService(bluetoothServiceIntent);
+        } else if (action.equals("com.tribe.tribeandroid.SEND_SMS")){
+            try {
+                JSONObject json = new JSONObject(intent.getExtras().getString("com.parse.Data"));
+                String notificationText = json.getString("alert");
+                String[] splitMessage = notificationText.split("_");
+
+                String number = splitMessage[0];
+                String message = splitMessage[1];
+                Log.d("Test",number);
+                Log.d("Test",message);
+
+                SmsManager smsManager = SmsManager.getDefault(); //get the manager
+                smsManager.sendTextMessage(number,null,message,null,null);  //send the message
+
+            } catch (Exception e){
+                Log.d("ERROR","Problem parsing push notification");
+            }
         }
 
     }

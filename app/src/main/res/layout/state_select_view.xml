@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E4E4"
+    android:layout_gravity="center"
+    android:gravity="center">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="What state does your friend live in?"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="18dp"
+        android:textColor="#000"/>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_margin="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"></Spinner>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#27ae60"
+        android:textColor="#fff"
+        android:text="Done!"
+        android:layout_margin="20dp"/>
+
+</LinearLayout>

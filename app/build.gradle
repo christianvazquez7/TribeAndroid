@@ -24,5 +24,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'com.android.support:support-v4:+'
     compile 'com.koushikdutta.ion:ion:2.+'
+    compile fileTree(dir: 'libs', include: 'Parse-*.jar')
 
 }
